@@ -23,3 +23,6 @@ print_r($dump);
 
 echo "Ikki";
 print_r($dump);
+
+echo "Uch";
+print_r($dump);
