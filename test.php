@@ -18,3 +18,4 @@ file_put_contents("data/message.json", $dump);
 
 echo "<pre>";
 print_r($dump);
+print_r($dump);
