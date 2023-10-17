@@ -1,6 +1,5 @@
 <?php
 
-use ustadev\Auth;
 use ustadev\SmsMessage;
 
 include_once "src/Auth.php";
@@ -15,18 +14,3 @@ $dump = $update->sendMessage("+998911577769","Salom nima gap. akhlidinov.uz");
 //file_put_contents("data/token.json", $dump);
 
 file_put_contents("data/message.json", $dump);
-
-echo "<pre>";
-print_r($dump);
-echo "Bir";
-print_r($dump);
-
-echo "Ikki";
-print_r($dump);
-
-echo "Uch";
-print_r($dump);
-
-
-echo "Uch";
-print_r($dump);

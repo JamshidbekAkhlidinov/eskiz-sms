@@ -2,10 +2,12 @@
 
 namespace ustadev;
 
-include "Base.php";
-
 class SmsMessage extends Base
 {
+    public function setFunction($token)
+    {
+        $this->token = $token;
+    }
 
     public function sendMessage($phone_number, $text)
     {
@@ -32,5 +34,4 @@ class SmsMessage extends Base
     {
         return parent::reuquest("message/sms/" . $method, $options);
     }
-
 }
