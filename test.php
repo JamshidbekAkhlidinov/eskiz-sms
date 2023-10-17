@@ -5,13 +5,17 @@ use ustadev\SmsMessage;
 
 include_once "vendor/autoload.php";
 
-$test = new Auth("jamshidbekaxlidinov2003@gmail.com", "uqxDu2V3yoRcyiuQIN56fSAEssHkOEl4fjFYWHfY");
-$data = $test->login();
+$test = new Auth(
+    "jamshidbekaxlidinov2003@gmail.com",
+    "uqxDu2V3yoRcyiuQIN56fSAEssHkOEl4fjFYWHfY"
+);
+$token = $test->getToken();
 
-$token = $data['data']['token'];
 
 $message = new SmsMessage();
 $message->setToken($token);
-$response = $message->sendMessage("+998911577769", "Ustadev.uz");
+$response = $message->sendMessage(
+    "+998911577769",
+    "ustadev.uz"
+);
 
-print_r($response);
