@@ -4,6 +4,8 @@ namespace ustadev;
 
 class Base
 {
+    use Cash;
+
     public $token;
 
     public function reuquest($method, $options = [])
