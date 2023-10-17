@@ -1,0 +1,17 @@
+{
+    "name": "ustadev/eskiz-sms",
+    "description": "Yii2. ustadev.uz",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "ustadev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JamshidbekAkhlidinov",
+            "email": "jamshidbekakhlidinov@gmail.com"
+        }
+    ],
+    "require": {}
+}
