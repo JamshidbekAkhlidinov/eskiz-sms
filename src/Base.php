@@ -27,6 +27,6 @@ class Base
         ));
         $response = curl_exec($curl);
         curl_close($curl);
-        return $response;
+        return json_decode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 }

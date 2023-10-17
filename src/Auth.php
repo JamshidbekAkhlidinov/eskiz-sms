@@ -4,11 +4,18 @@ namespace ustadev;
 
 class Auth extends Base
 {
+    public function __construct(
+        public $email,
+        public $password,
+    )
+    {
+    }
+
     public function login()
     {
         return $this->reuquest("login", [
-            'email' => 'test@gmail.com',
-            'password' => 'test'
+            'email' => $this->email,
+            'password' => $this->password
         ]);
     }
 

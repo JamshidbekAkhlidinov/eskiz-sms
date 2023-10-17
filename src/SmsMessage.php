@@ -4,7 +4,7 @@ namespace ustadev;
 
 class SmsMessage extends Base
 {
-    public function setFunction($token)
+    public function setToken($token)
     {
         $this->token = $token;
     }
