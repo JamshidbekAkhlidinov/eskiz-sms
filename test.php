@@ -1,16 +1,17 @@
 <?php
 
+use ustadev\Auth;
 use ustadev\SmsMessage;
 
-include_once "src/Auth.php";
-include_once "src/SmsMessage.php";
+include_once "vendor/autoload.php";
 
+$test = new Auth("jamshidbekaxlidinov2003@gmail.com", "uqxDu2V3yoRcyiuQIN56fSAEssHkOEl4fjFYWHfY");
+$data = $test->login();
 
-$update = new SmsMessage();
-$dump = $update->sendMessage("+998911577769","Salom nima gap. akhlidinov.uz");
+$token = $data['data']['token'];
 
-//$login = new Auth();
-//$dump = $login->login();
-//file_put_contents("data/token.json", $dump);
+$message = new SmsMessage();
+$message->setToken($token);
+$response = $message->sendMessage("+998911577769", "Ustadev.uz");
 
-file_put_contents("data/message.json", $dump);
+print_r($response);
