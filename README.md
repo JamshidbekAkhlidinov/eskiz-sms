@@ -1,5 +1,6 @@
 # eskiz-sms
 
+[![wakatime](https://wakatime.com/badge/user/d3110f77-d926-4238-8cdc-a8991b6685c0/project/018b3716-2c96-4a0c-acdc-44282e485800.svg)](https://wakatime.com/badge/user/d3110f77-d926-4238-8cdc-a8991b6685c0/project/018b3716-2c96-4a0c-acdc-44282e485800)
 
 ## Installation
 
@@ -17,7 +18,7 @@ Or
 #### Example
 
     <?php
-    
+
     use ustadev\Auth;
     use ustadev\SmsMessage;
     
@@ -33,7 +34,9 @@ Or
     $message = new SmsMessage();
     $message->setToken($token);
     $response = $message->sendMessage(
-        "+998901234567",
+        "+998*********",
         "ustadev.uz"
     );
+    
+    print_r($response);
 

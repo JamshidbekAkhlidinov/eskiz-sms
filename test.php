@@ -6,8 +6,8 @@ use ustadev\SmsMessage;
 include_once "vendor/autoload.php";
 
 $test = new Auth(
-    "jamshidbekaxlidinov2003@gmail.com",
-    "uqxDu2V3yoRcyiuQIN56fSAEssHkOEl4fjFYWHfY"
+    "test@gmail.com",
+    "test"
 );
 $token = $test->getToken();
 
@@ -15,7 +15,9 @@ $token = $test->getToken();
 $message = new SmsMessage();
 $message->setToken($token);
 $response = $message->sendMessage(
-    "+998911577769",
+    "+998*********",
     "ustadev.uz"
 );
+
+print_r($response);
 
