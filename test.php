@@ -1,7 +1,7 @@
 <?php
 
-use ustadev\Auth;
-use ustadev\SmsMessage;
+use ustadev\sms\Auth;
+use ustadev\sms\SmsMessage;
 
 include_once "vendor/autoload.php";
 

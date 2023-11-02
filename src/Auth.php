@@ -1,6 +1,6 @@
 <?php
 
-namespace ustadev;
+namespace ustadev\sms;
 
 class Auth extends Base
 {
