@@ -6,11 +6,13 @@ class Auth extends Base
 {
     use Cash;
 
-    public function __construct(
-        public $email,
-        public $password,
-    )
+    public $email;
+    public $password;
+
+    public function __construct($email, $password)
     {
+        $this->email = $email;
+        $this->password = $password;
     }
 
     public function login()
@@ -24,7 +26,7 @@ class Auth extends Base
     public function getToken()
     {
         if ($token = $this->getCash()) {
-            return  $token;
+            return $token;
         }
 
         $data = $this->login();
